@@ -1,0 +1,37 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Panda Express",
+        "poi": "restaurant",
+        "style": "Chinese Restaurant",
+        "call-out": "Some fast Chinese goodies!"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+		-122.09702256272297,
+        37.40292274053587
+        ]
+      }
+    },
+	{
+      "type": "Feature",
+      "properties": {
+        "title": "Test 1",
+        "poi": "cinema",
+        "style": "Cinema",
+        "call-out": "Watch movies or smth!"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+		-122.123,
+        37.501
+        ]
+      }
+    }
+  ]
+}

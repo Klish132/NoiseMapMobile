@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/salad"
+    tools:context=".MarkerMenu">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="0dp"
+        android:layout_height="242dp"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvTitleLabel"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="left|center_vertical"
+        android:text="Название:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        mapbox:layout_constraintEnd_toStartOf="@+id/tvTitle"
+        mapbox:layout_constraintHorizontal_bias="0.0"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toBottomOf="@+id/container" />
+
+    <TextView
+        android:id="@+id/tvVolumeLabel"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="left|center_vertical"
+        android:text="Уровень шума:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        mapbox:layout_constraintEnd_toStartOf="@+id/tvVolume"
+        mapbox:layout_constraintHorizontal_bias="0.0"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toBottomOf="@+id/tvTitleLabel" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="right|center_vertical"
+        android:text="title"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintTop_toBottomOf="@+id/container" />
+
+    <TextView
+        android:id="@+id/tvVolume"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="right|center_vertical"
+        android:text="volume"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <Button
+        android:id="@+id/btnRecord"
+        style="@style/ButtonStyle1"
+        android:text="Записать"
+        android:visibility="invisible"
+        mapbox:layout_constraintBottom_toTopOf="@+id/btnSave"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintHorizontal_bias="0.498"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toBottomOf="@+id/tvVolume"
+        mapbox:layout_constraintVertical_bias="0.4" />
+
+    <Button
+        android:id="@+id/btnStopRecording"
+        style="@style/ButtonStyle2"
+        android:text="Остановить"
+        android:visibility="invisible"
+        mapbox:layout_constraintBottom_toTopOf="@+id/btnSave"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintHorizontal_bias="0.498"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toBottomOf="@+id/tvVolume"
+        mapbox:layout_constraintVertical_bias="0.4" />
+
+    <Button
+        android:id="@+id/btnPlayServer"
+        style="@style/ButtonStyle1"
+        android:text="Прослушать\n шум"
+        android:visibility="invisible"
+        mapbox:layout_constraintBottom_toTopOf="@+id/btnSave"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintHorizontal_bias="0.498"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toBottomOf="@+id/tvVolume"
+        mapbox:layout_constraintVertical_bias="0.4" />
+
+    <Button
+        android:id="@+id/btnStopPlayingServer"
+        style="@style/ButtonStyle2"
+        android:text="Остановить"
+        android:visibility="invisible"
+        mapbox:layout_constraintBottom_toTopOf="@+id/btnSave"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintHorizontal_bias="0.498"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toBottomOf="@+id/tvVolume"
+        mapbox:layout_constraintVertical_bias="0.4" />
+
+    <Button
+        android:id="@+id/btnPlayDisk"
+        style="@style/ButtonStyle1"
+        android:layout_marginStart="40dp"
+        android:text="Проиграть\n запись"
+        android:visibility="invisible"
+        mapbox:layout_constraintBottom_toTopOf="@+id/btnSave"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toBottomOf="@+id/tvVolume"
+        mapbox:layout_constraintVertical_bias="0.4" />
+
+    <Button
+        android:id="@+id/btnStopPlayingDisk"
+        style="@style/ButtonStyle2"
+        android:layout_marginStart="40dp"
+        android:text="Остановить"
+        android:visibility="invisible"
+        mapbox:layout_constraintBottom_toTopOf="@+id/btnSave"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toBottomOf="@+id/tvVolume"
+        mapbox:layout_constraintVertical_bias="0.4" />
+
+    <Button
+        android:id="@+id/btnDeleteDisk"
+        style="@style/ButtonStyle3"
+        android:layout_marginEnd="40dp"
+        android:text="Удалить\n запись"
+        android:visibility="invisible"
+        mapbox:layout_constraintBottom_toTopOf="@+id/btnSave"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintTop_toBottomOf="@+id/tvVolume"
+        mapbox:layout_constraintVertical_bias="0.4" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:layout_marginBottom="50dp"
+        android:text="Сохранить запись"
+        android:textColor="@color/black"
+        mapbox:layout_constraintBottom_toBottomOf="parent"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
